@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Verification Result</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f4f7fb;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Card */
+.card{
+    width:450px;
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Heading */
+.card h2{
+    margin-bottom:20px;
+    color:#0a2540;
+}
+
+/* Status */
+.status{
+    font-size:26px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+/* Risk */
+.risk{
+    font-size:18px;
+    margin-top:10px;
+    color:#444;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:10px 22px;
+    background:#0a2540;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Verification Result</h2>
+
+{% if color == "green" %}
+<div class="status" style="color:green;">
+    ✔ {{ status }}
+</div>
+{% else %}
+<div class="status" style="color:red;">
+    ✖ {{ status }}
+</div>
+{% endif %}
+
+<div class="risk">
+    🤖 AI Risk Level: <b>{{ risk }}</b>
+</div>
+
+<a class="btn" href="{{ url_for('dashboard') }}">
+    Back to Dashboard
+</a>
+
+</div>
+
+</body>
+</html>
