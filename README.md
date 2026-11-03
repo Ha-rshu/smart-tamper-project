@@ -120,6 +120,4 @@ This is an educational prototype, not a production-ready security system.
 - Cloud-based file integrity monitoring.
 - Automated testing and deployment.
 
-## License
 
-No license has been specified yet.
